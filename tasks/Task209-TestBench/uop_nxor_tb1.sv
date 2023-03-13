@@ -27,17 +27,13 @@ begin
 
 	//Stimulate the aa and bb signals and manually observe the change in yy
 
-   aa = 1'b0;	// 1'b0 => 1 bit wide, binary, value 0
-   bb = 1'b0;
+   {aa,bb} = 2'b00;	// 1'b0 => 1 bit wide, binary, value 
    #50ps;		// Simulate 50ps delay
-   aa = 1'b0;
-   bb = 1'b1;	// 1'b1 => 1 bit wide, binary, value 1
+   {aa,bb} = 2'b01;	// 1'b1 => 1 bit wide, binary, value 1
    #50ps;
-   aa = 1'b1;
-   bb = 1'b0;
+   {aa,bb} = 2'b10;
    #50ps;
-   aa = 1'b1;
-   bb = 1'b1;
+   {aa,bb} = 2'b00;
    #50ps;
    $display("DONE");	// Similar to printf.
 
