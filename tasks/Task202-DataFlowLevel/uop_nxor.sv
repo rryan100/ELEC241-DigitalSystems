@@ -1,8 +1,7 @@
 module uop_nxor (output wire Y, input wire A, input wire B);
 
 //Internal wires
-wire term0;
-wire term3;
+wire term0, term3;
 
 //Continuous Assignment (order does not matter)
 assign Y = term0 | term3;
